@@ -25,6 +25,7 @@ public class WikiTest {
         wiki.searchInput
                 .shouldBe(Condition.enabled, Condition.visible, Condition.empty)
                 .click();
+        sleep(500); // без ожидания тест иногда проваливается
         wiki.searchInput.setValue("a cake is a lie");
         wiki.searchButtonChild.parent()
                 .shouldBe(Condition.visible)
@@ -46,6 +47,7 @@ public class WikiTest {
         wiki.searchInput
                 .shouldBe(Condition.enabled, Condition.visible, Condition.empty)
                 .click();
+        sleep(500);
         wiki.searchInput.setValue("Jonh Smith");
         wiki.searchButtonChild.parent()
                 .shouldBe(Condition.visible)
@@ -67,6 +69,7 @@ public class WikiTest {
         wiki.searchInput
                 .shouldBe(Condition.enabled, Condition.visible, Condition.empty)
                 .click();
+        sleep(500);
         wiki.searchInput.setValue("hdkfkshdfiuoeghhfhak");
         wiki.searchButtonChild.parent()
                 .shouldBe(Condition.visible)
